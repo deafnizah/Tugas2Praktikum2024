@@ -17,8 +17,10 @@ class FormDataState extends State<FormData> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Input Data"),
+        title: const Text("Masukkan Identitasmu!"),
+        backgroundColor: Color(0xFFB77B82),
       ),
+      backgroundColor: Color(0xFFEFEDE8),
       body: Container(
         margin: const EdgeInsets.all(10),
         child: Column(
@@ -55,7 +57,10 @@ class FormDataState extends State<FormData> {
   }
 
   _tombolSimpan() {
-    return ElevatedButton(
+    return SizedBox(
+      width: double.infinity, // Tombol memenuhi lebar layar
+      height: 50, // Tinggi tombol
+      child: ElevatedButton(
         onPressed: () {
           String nama = _namaController.text;
           String nim = _nimController.text;
@@ -64,6 +69,8 @@ class FormDataState extends State<FormData> {
               builder: (context) =>
                   TampilData(nama: nama, nim: nim, tahun: tahun)));
         },
-        child: const Text('Simpan'));
+        child: const Text('Simpan', style: TextStyle(fontSize: 18)), // Ukuran teks tombol
+      ),
+    );
   }
 }
