@@ -11,11 +11,17 @@ JELASKAN PROSES PASSING DATA DARI FORM MENUJU TAMPILAN DENGAN FILE `README.md`
 Buat tampilan semenarik mungkin untuk dilihat.
 
 
-Nama : ___
+Nama : Dea Afni Azizah
 
-NIM : ___
+NIM : H1D022093
 
-Shift Baru: ___
+Shift Baru: C
+
+Proses Passing Data:
+1. Di layar form (LayarForm), data dikumpulkan dari TextEditingController setelah pengguna menekan tombol.
+2. Data dikirim ke layar tujuan (TampilData) menggunakan Navigator.of(context).push.
+3. MaterialPageRoute digunakan untuk membuat rute baru dan menyertakan data sebagai parameter dalam konstruktor TampilData.
+4. Di layar tujuan (TampilData), data diterima melalui parameter konstruktor dan digunakan untuk menampilkan informasi yang sesuai.
 
 ## Screenshot
 Contoh :
